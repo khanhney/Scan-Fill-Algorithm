@@ -1,0 +1,40 @@
+<div class='clickable'>
+ <span class='display'></span>
+ <img id="image_doc" src="http://jaggerco.com/publish/assets/images/dk-600x534.jpg"    style="width: 200px; height: 200px" />
+</div>
+<strong>
+    (<span id="xxx"></span>,
+    <span id="yyy"></span>)
+</strong>
+<div id="list">
+  
+</div>
+
+
+
+$('.clickable').bind('click', function (ev) {
+    var $div = $(ev.target);
+    var $display = $div.find('.display');
+    
+    var offset = $div.offset();
+    var x = ev.clientX - offset.left;
+    var y = offset.top-ev.clientY +200 ;
+    
+    var yy = ev.clientY-offset.top  ;
+    $('#xxx').text(x);
+    $('#yyy').text(y);
+    
+ 				var color = '#f00';
+        var size = '3px';
+        $("body").append(
+            $('<div></div>')
+                .css('position', 'absolute')
+                .css('top', yy + 'px')
+                .css('left', x + 'px')
+                .css('width', size)
+                .css('height', size)
+                .css('background-color', color)
+        );
+    
+    $('#list').append(`${x},${y}<br\>`);
+});

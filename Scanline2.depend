@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1529807667 source:e:\scanline2\main.cpp
+	<windows.h>
+	<stdio.h>
+	<math.h>
+	<GL/glut.h>
+	<GL/glext.h>
+	<unistd.h>
+
+976641772 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
